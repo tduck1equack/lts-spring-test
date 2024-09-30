@@ -19,7 +19,7 @@ public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "article_id")
-    private int articleId;
+    private Integer articleId;
     @Column(length = 50)
     private String name;
     @Column(length = 50)
@@ -32,14 +32,14 @@ public class Article {
     private String photo;
 
     @Column(name = "topic_id", updatable = false, insertable = false)
-    private int topicId;
+    private Integer topicId;
     @ManyToOne()
     @JsonBackReference
     @JoinColumn(name = "topic_id")
     private Topic topic;
 
     @Column(name = "account_id", updatable = false, insertable = false)
-    private int accountId;
+    private Integer accountId;
     @ManyToOne()
     @JsonBackReference
     @JoinColumn(name = "account_id")

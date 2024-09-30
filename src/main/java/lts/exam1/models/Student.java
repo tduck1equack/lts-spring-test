@@ -20,7 +20,7 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "student_id")
-    private int studentId;
+    private Integer studentId;
     private String photo;
     @Column(length = 50)
     private String name;

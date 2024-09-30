@@ -20,18 +20,18 @@ public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "course_id")
-    private int courseId;
+    private Integer courseId;
     @Column(length = 50)
     private String name;
     @Column(name = "learning_time")
-    private int learningTime;
+    private Integer learningTime;
     private String introduction;
     private String description;
-    private double fee;
+    private Double fee;
     @Column(name = "student_count")
-    private int studentCount;
+    private Integer studentCount;
     @Column(name = "subject_count")
-    private int subjectCount;
+    private Integer subjectCount;
     private String photo;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "course")
@@ -39,7 +39,7 @@ public class Course {
     private List<Registration> registrations;
 
     @Column(name = "course_type_id", updatable = false, insertable = false)
-    private int courseTypeId;
+    private Integer courseTypeId;
     @ManyToOne()
     @JsonBackReference
     @JoinColumn(name = "course_type_id")
